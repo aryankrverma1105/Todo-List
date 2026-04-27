@@ -1,66 +1,130 @@
-# Taskr — Full Stack Todo App
+# 🚀 Taskr — Full Stack Todo App
 
-A simple but well-built todo app using **Express.js** (Node) on the back end and vanilla **HTML/CSS/JS** on the front end.
+✨ A modern and minimal **Full Stack Todo Application** to manage your daily tasks efficiently.
 
-## Project Structure
+---
 
-```
-todo-app/
-├── server.js          ← Express API server
-├── package.json
+## 🎯 Tech Stack
+
+* 🟢 **Node.js + Express** (Backend)
+* 🎨 **HTML, CSS, JavaScript** (Frontend)
+
+---
+
+## ✨ Features
+
+* 📝 Create, Read, Update, Delete (CRUD) tasks
+* ✅ Mark tasks as complete/incomplete
+* 🎯 Set priority (Low / Medium / High)
+* 🔍 Live search tasks
+* 📂 Filter (All / Active / Completed)
+* 🎨 Clean and responsive UI
+
+---
+
+## 🎥 Demo (GIF)
+
+> 📌 Add your project GIF here (recommended for GitHub)
+
+![App Demo](https://via.placeholder.com/800x400?text=Add+Your+App+GIF+Here)
+
+---
+
+## 📁 Project Structure
+
+```id="u3d6yb"
+todo-full-stack/
+│
+├── server.js          # 🚀 Backend (Express Server)
+├── package.json       # 📦 Dependencies & scripts
 └── public/
-    ├── index.html     ← Frontend markup
-    ├── style.css      ← Styles
-    └── app.js         ← Frontend logic + API calls
+    ├── index.html     # 🌐 UI structure
+    ├── style.css      # 🎨 Styling
+    └── app.js         # 🧠 Frontend logic
 ```
 
-## Getting Started
+---
 
-### 1. Install dependencies
+## ⚙️ Getting Started
 
-```bash
+### 1️⃣ Install dependencies
+
+```bash id="9ojh77"
 npm install
 ```
 
-### 2. Start the server
+---
 
-```bash
+### 2️⃣ Start the server
+
+```bash id="3r4yec"
 npm start
 ```
 
-Then open **http://localhost:3000** in your browser.
+---
+
+### 3️⃣ Open in browser 🌐
+
+```id="u2p1qf"
+http://localhost:3000
+```
 
 ---
 
-## API Endpoints
+## 🔌 API Endpoints
 
-| Method | Route              | Description        |
-|--------|--------------------|--------------------|
-| GET    | `/api/todos`       | Get all todos      |
-| GET    | `/api/todos/:id`   | Get a single todo  |
-| POST   | `/api/todos`       | Create a new todo  |
-| PUT    | `/api/todos/:id`   | Update a todo      |
-| DELETE | `/api/todos/:id`   | Delete a todo      |
+| Method | Endpoint       | Description        |
+| ------ | -------------- | ------------------ |
+| GET    | /api/todos     | 📥 Get all todos   |
+| GET    | /api/todos/:id | 🔎 Get single todo |
+| POST   | /api/todos     | ➕ Create todo      |
+| PUT    | /api/todos/:id | ✏️ Update todo     |
+| DELETE | /api/todos/:id | ❌ Delete todo      |
 
-### Example POST body
+---
 
-```json
+## 🧪 Example Request (POST)
+
+```json id="4mq4eq"
 {
-  "title": "Buy groceries",
-  "description": "Milk, eggs, bread",
-  "priority": "medium"
+  "title": "Complete assignment",
+  "description": "Finish before deadline",
+  "priority": "high"
 }
 ```
 
-Priority values: `low`, `medium`, `high`
+---
+
+## ⚠️ Important Note
+
+⚡ Data is stored in **memory only**
+🔁 Restarting the server will **reset all tasks**
 
 ---
 
-## Features
+## 🛠️ Future Improvements
 
-- Create, read, update, delete tasks
-- Mark tasks as complete/incomplete
-- Priority levels (low / medium / high)
-- Filter by All / Active / Completed
-- Live search
-- Persistent in-memory store (swap with a DB to make it permanent)
+* 🗄️ Add database (MongoDB / MySQL)
+* 🔐 User authentication
+* ☁️ Deployment (Render / Vercel)
+* 📱 Mobile-friendly enhancements
+
+---
+
+## 👨‍💻 Author
+
+**Aryan Kumar Verma**
+
+---
+
+## ⭐ Show Your Support
+
+If you like this project:
+
+⭐ Star this repo
+🍴 Fork it
+💡 Contribute
+
+---
+
+💙 Happy Coding!
