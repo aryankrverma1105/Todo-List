@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskr — Get Things Done</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">Taskr</span>
+      </div>
+
+      <nav class="filters">
+        <button class="filter-btn active" data-filter="all">
+          <span class="filter-icon">◈</span> All Tasks
+          <span class="filter-count" id="count-all">0</span>
+        </button>
+        <button class="filter-btn" data-filter="active">
+          <span class="filter-icon">◉</span> Active
+          <span class="filter-count" id="count-active">0</span>
+        </button>
+        <button class="filter-btn" data-filter="completed">
+          <span class="filter-icon">◎</span> Completed
+          <span class="filter-count" id="count-completed">0</span>
+        </button>
+      </nav>
+
+      <div class="priority-legend">
+        <p class="legend-label">Priority</p>
+        <div class="legend-item"><span class="dot high"></span> High</div>
+        <div class="legend-item"><span class="dot medium"></span> Medium</div>
+        <div class="legend-item"><span class="dot low"></span> Low</div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1 class="page-title">My Tasks</h1>
+          <p class="page-sub" id="date-display"></p>
+        </div>
+        <button class="btn-new" id="openModalBtn">+ New Task</button>
+      </header>
+
+      <div class="search-row">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search tasks..." />
+      </div>
+
+      <div class="todo-list" id="todoList">
+        <!-- Items rendered here -->
+      </div>
+
+      <div class="empty-state" id="emptyState" style="display:none;">
+        <div class="empty-icon">✦</div>
+        <p>No tasks here yet.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Modal: Create / Edit -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modalTitle">New Task</h2>
+        <button class="modal-close" id="closeModalBtn">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <label class="form-label">Title <span class="required">*</span></label>
+        <input type="text" class="form-input" id="inputTitle" placeholder="What needs to be done?" maxlength="100" />
+
+        <label class="form-label">Description</label>
+        <textarea class="form-input form-textarea" id="inputDesc" placeholder="Add some details... (optional)" rows="3"></textarea>
+
+        <label class="form-label">Priority</label>
+        <div class="priority-picker">
+          <button class="priority-option" data-value="low">Low</button>
+          <button class="priority-option selected" data-value="medium">Medium</button>
+          <button class="priority-option" data-value="high">High</button>
+        </div>
+
+        <p class="form-error" id="formError"></p>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-cancel" id="cancelBtn">Cancel</button>
+        <button class="btn-save" id="saveBtn">Save Task</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

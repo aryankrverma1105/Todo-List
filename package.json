@@ -1,0 +1,19 @@
+{
+  "name": "todo-full-stack",
+  "version": "1.0.0",
+  "description": "A simple but well-built todo app using **Express.js** (Node) on the back end and vanilla **HTML/CSS/JS** on the front end.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.1",
+    "uuid": "^14.0.0"
+  }
+}
