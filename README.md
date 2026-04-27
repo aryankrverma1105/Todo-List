@@ -22,14 +22,6 @@
 
 ---
 
-## 🎥 Demo (GIF)
-
-> 📌 Add your project GIF here (recommended for GitHub)
-
-![App Demo](https://via.placeholder.com/800x400?text=Add+Your+App+GIF+Here)
-
----
-
 ## 📁 Project Structure
 
 ```id="u3d6yb"
